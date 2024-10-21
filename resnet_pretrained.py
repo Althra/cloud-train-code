@@ -14,8 +14,8 @@ transform = transforms.Compose([
 ])
 
 # 加载训练和测试数据集
-train_dataset = datasets.CIFAR10(root='~/datasets/cifar10', train=True, download=False, transform=transform)
-test_dataset = datasets.CIFAR10(root='~/datasets/cifar10', train=False, download=False, transform=transform)
+train_dataset = datasets.CIFAR10(root='./datasets/cifar10', train=True, download=False, transform=transform)
+test_dataset = datasets.CIFAR10(root='./datasets/cifar10', train=False, download=False, transform=transform)
 train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
 print(f"Dateset size: {len(train_dataset), len(test_dataset)}")
